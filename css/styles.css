@@ -81,6 +81,8 @@ address {
 }
 
 ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -114,7 +116,6 @@ ul {
 
 .link:hover {
   color: var(--colour-brand-light);
-  font-weight: 600;
 }
 
 .address-link {
@@ -124,6 +125,31 @@ ul {
   text-decoration: none;
 }
 
+/* header */
+
+.header-menu {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 40px;
+}
+
+.header {
+  background-color: gray;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 /* hero section */
 .hero-title {
   margin-bottom: 0;
@@ -140,28 +166,37 @@ ul {
 .hero-section {
   padding: 272px 0;
 }
-/* tradition section */
-.tradition-section {
-  padding-top: 96px;
-}
-
-.tradition-title {
-  margin-bottom: 42px;
-}
 
 /* advantages section */
 
-.advantages {
-  color: var(--colour-primary-white);
+.advantages-section {
+  padding: 16px 0;
   background-color: var(--colour-brand-light);
 }
 
+.advantages-list {
+  gap: 40px;
+  justify-content: space-between;
+  display: flex;
+}
+
 .advantages-item {
+  color: var(--colour-primary-white);
   font-size: 20px;
   font-weight: 300;
 }
 
 /* tradition section */
+
+.traditions-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.traditions-content {
+  max-width: 710px;
+}
 
 .tradition-text .brand {
   color: var(--colour-brand-light);
@@ -170,6 +205,17 @@ ul {
 
 .tradition-text .uppercase {
   text-transform: uppercase;
+}
+
+.tradition-section {
+  padding-top: 96px;
+}
+.tradition-text.limited {
+  max-width: 320px;
+}
+
+.tradition-title {
+  margin-bottom: 42px;
 }
 
 .section-title {
@@ -192,12 +238,29 @@ ul {
   margin-bottom: 80px;
 }
 /* format section */
+
+.formats-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.formats-item {
+  flex-basis: calc((100% - 40px) / 3);
+}
+
 .format-title {
   font-size: 24px;
   font-weight: 600;
 }
 .formats-title {
   margin-bottom: 80px;
+}
+
+.format-card {
+  padding: 24px;
+  border: 1px solid lightgray;
+  border-radius: 16px;
 }
 
 /* join section */
