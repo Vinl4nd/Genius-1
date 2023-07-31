@@ -1,11 +1,15 @@
+.flex-container {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
 * {
   box-sizing: border-box;
 }
 
-.box {
-  display: inline-block;
-  box-sizing: border-box;
-  width: 100px;
+.item {
+  flex-basis: 100px;
   height: 100px;
   padding: 10px;
   margin: 10px;
@@ -13,6 +17,15 @@
   background-color: blanchedalmond;
 }
 
-.box:nth-child(odd) {
-  background-color: gold;
+/* .item:nth-child(2) {
+  order: 1;
+  flex-basis: 50px;
+  height: 50px;
+  align-self: end;
 }
+
+.item:nth-child(3) {
+  order: 2;
+  flex-basis: 80px;
+  height: 80px;
+} */
