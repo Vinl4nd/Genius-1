@@ -63,9 +63,6 @@ p {
   box-sizing: border-box;
 }
 
-address {
-  font-style: normal;
-}
 
 .container {
   width: 100%;
@@ -120,12 +117,6 @@ ul {
   color: var( --colour-brand-normal);
 }
 
-.address-link {
-  color: var(--colour-primary-white);
-  font-size: 16px;
-  font-weight: 300;
-  text-decoration: none;
-}
 
 /* header */
 
@@ -261,8 +252,30 @@ content: '';
   max-width: 550px;
   margin:0 auto 80px;
 }
-/* format section */
 
+/* carousel section */
+
+.carousel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--colour-primary-dark);
+  padding: 0;
+  cursor: pointer;
+  fill: var(--colour-primary-dark);
+}
+
+.carousel-button:hover {
+  background-color: var(--colour-primary-dark);
+  fill: var(--colour-primary-white);
+}
+
+
+/* format section */
 .formats-list {
   display: flex;
   gap: 20px;
@@ -301,6 +314,26 @@ content: '';
 }
 
 /* adress section */
+
+.adress-icon {
+fill: var(--colour-primary-white);
+}
+
+.adress-icon:hover {
+  fill: var(--colour-brand-normal);
+  }
+
+address {
+  font-style: normal;
+}
+
+.address-link {
+  color: var(--colour-primary-white);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
 .address-copyright {
   font-size: 14px;
   color: var(--colour-secondary-light);
