@@ -31,12 +31,12 @@
 }
 
 :root {
-   --colour-brand-normal: #819b57;
+  --colour-brand-normal: #819b57;
   --colour-brand-dark: #465929;
   --colour-primary-white: #faf4ea;
   --colour-primary-dark: #31261a;
-  --colour-brand-light: #CFCFBC;
-  --colour-secondary-dark: #A18268 ;
+  --colour-brand-light: #cfcfbc;
+  --colour-secondary-dark: #a18268;
 }
 
 body {
@@ -59,10 +59,11 @@ p {
   margin-top: 0;
 }
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
-
 
 .container {
   width: 100%;
@@ -79,6 +80,10 @@ p {
   overflow: hidden;
 }
 
+a {
+  display: inline-block;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -92,8 +97,8 @@ ul {
 /* button */
 .button {
   padding: 16px 32px;
-  background-color: var( --colour-brand-normal);
-  border: 2px solid var( --colour-brand-normal);
+  background-color: var(--colour-brand-normal);
+  border: 2px solid var(--colour-brand-normal);
   border-radius: 8px;
   font-weight: 600;
   color: #faf4ea;
@@ -114,9 +119,8 @@ ul {
 }
 
 .link:hover {
-  color: var( --colour-brand-normal);
+  color: var(--colour-brand-normal);
 }
-
 
 /* header */
 
@@ -153,7 +157,7 @@ ul {
 }
 
 .hero-title .accent {
-  color: var( --colour-brand-normal);
+  color: var(--colour-brand-normal);
 }
 
 .hero-section {
@@ -168,7 +172,7 @@ ul {
 
 .advantages-section {
   padding: 16px 0;
-  background-color: var( --colour-brand-normal);
+  background-color: var(--colour-brand-normal);
 }
 
 .advantages-list {
@@ -196,7 +200,7 @@ ul {
 }
 
 .tradition-text .brand {
-  color: var( --colour-brand-normal);
+  color: var(--colour-brand-normal);
   font-weight: 600;
 }
 
@@ -229,33 +233,60 @@ ul {
   color: var(--colour-brand-dark);
 }
 /* Title section */
+
+.chef-text p {
+  margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+  margin-bottom: 0px;
+}
+
+.chefs-list {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 40px 30px;
+}
+
+.chefs-item {
+  flex-basis: calc(100% - 30px / 2);
+}
+
 .chef-title {
   font-weight: 600;
   font-size: 40px;
   margin-bottom: 16px;
 }
 
+.chefs-card {
+  display: flex;
+  gap: 30px;
+}
+
 .chef-photo {
-  box-shadow: -16px 16px 0 0 var(--colour-primary-white), -16px 16px 0 2px var(--colour-secondary-dark) ;
+  box-shadow: -16px 16px 0 0 var(--colour-primary-white),
+    -16px 16px 0 2px var(--colour-secondary-dark);
   border-radius: 4px 4px 4px 200px;
 }
 
-.chefs-title::after,.chefs-title::before {
+.chefs-title::after,
+.chefs-title::before {
   width: 352px;
   height: 2px;
   background-color: var(--colour-brand-light);
   display: block;
-content: '';
+  content: '';
 }
 
 .chefs-title {
   max-width: 550px;
-  margin:0 auto 80px;
+  margin: 0 auto 80px;
 }
 
 /* carousel section */
 
 .carousel-button {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -274,8 +305,14 @@ content: '';
   fill: var(--colour-primary-white);
 }
 
-
 /* format section */
+
+.formats-container {
+  align-items: center;
+  display: flex;
+  gap: 32px;
+}
+
 .formats-list {
   display: flex;
   gap: 20px;
@@ -297,7 +334,12 @@ content: '';
 .format-card {
   height: 444px;
   padding: 24px;
-  background-image: linear-gradient(180deg, rgba(49, 38, 26, 0.00) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--colour-primary-dark) 100%);
+  background-image: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    var(--colour-primary-dark) 100%
+  );
   border: 1px solid lightgray;
   border-radius: 16px;
 }
@@ -315,13 +357,18 @@ content: '';
 
 /* adress section */
 
+.adress-list,
+.adress-info {
+  flex-grow: 1;
+}
+
 .adress-icon {
-fill: var(--colour-primary-white);
+  fill: var(--colour-primary-white);
 }
 
 .adress-icon:hover {
   fill: var(--colour-brand-normal);
-  }
+}
 
 address {
   font-style: normal;
@@ -341,12 +388,46 @@ address {
 
 /* contact section */
 
+.contact-section {
+  padding-bottom: 96px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 32px;
+}
+.contact-map {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 16px;
+}
+
 .contacts-title {
   margin-bottom: 16px;
 }
 
-
 /* footer */
+
+.footer {
+  padding: 32px 0;
+}
+
+.footer-container {
+  gap: 20px;
+  display: flex;
+}
+
+.footer-logo,
+.footer-menu {
+  flex-grow: 1;
+}
+
+.footer-nav,
+.footer-adress {
+  gap: 20px;
+  display: flex;
+  flex-basis: 50%;
+}
 
 .footer {
   background-image: url(../imagies/footer-background.png);
