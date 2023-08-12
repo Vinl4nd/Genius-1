@@ -116,6 +116,7 @@ ul {
   color: var(--colour-primary-white);
   text-decoration: none;
   line-height: 1.5;
+  transition: color 0.3s;
 }
 
 .link:hover {
@@ -139,7 +140,11 @@ ul {
 }
 
 .header {
-  background-color: gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 32px;
 }
 
 .header-container {
@@ -162,7 +167,13 @@ ul {
 
 .hero-section {
   padding: 272px 0;
-  background-image: url(../imagies/hero-section-background.jpg);
+  background-image: linear-gradient(
+      127deg,
+      rgba(18, 18, 17, 0.78) 0%,
+      rgba(18, 18, 17, 0.6) 63.89%,
+      rgba(18, 18, 17, 0) 100%
+    ),
+    url(../imagies/hero-section-background.jpg);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -316,6 +327,10 @@ ul {
   fill: var(--colour-primary-white);
 }
 
+.carousel-button.next {
+  transform: rotate(180deg);
+}
+
 /* format section */
 
 .formats-container {
@@ -353,6 +368,11 @@ ul {
   );
   border: 1px solid lightgray;
   border-radius: 16px;
+  transition: transform 0.3s;
+}
+
+.format-card:hover {
+  transform: scale(1.05);
 }
 
 /* join section */
@@ -470,19 +490,20 @@ address {
 
 /* modal */
 .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  padding: 20px 0;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
 .backdrop.is-hidden {
-  display: none;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -490,8 +511,10 @@ address {
 
 .modal {
   position: relative;
-  width: 880px;
-  height: 880px;
+  width: 100%;
+  max-width: 880px;
+  height: 100%;
+  max-height: 880px;
   background-color: var(--colour-primary-white);
   border-radius: 32px;
 }
