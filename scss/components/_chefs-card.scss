@@ -1,0 +1,18 @@
+.chefs-card {
+  display: flex;
+  gap: 30px;
+
+  &__photo {
+    box-shadow: -16px 16px 0 0 var(--colour-primary-white),
+      -16px 16px 0 2px var(--colour-secondary-dark);
+    border-radius: 4px 4px 4px 200px;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
