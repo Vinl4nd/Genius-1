@@ -3,19 +3,28 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 32px;
+  padding-top: 16px;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding-top: 32px;
+  }
 
   &__container {
     display: flex;
     align-items: center;
     gap: 40px;
+    padding: 0 24px;
   }
 
   &__menu {
-    display: flex;
-    gap: 64px;
-    flex-grow: 1;
-    justify-content: center;
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      gap: 64px;
+      flex-grow: 1;
+      justify-content: center;
+    }
   }
 
   &__nav {
@@ -23,5 +32,26 @@
     align-items: center;
     flex-grow: 1;
     gap: 40px;
+  }
+
+  &__button {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+    }
+  }
+
+  &__burger {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    fill: var(--colour-primary-white);
+    background-color: transparent;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
   }
 }
